@@ -1,6 +1,6 @@
 name: Hello World Actions
 on: [push]
-jobs: 
+jobs:
   hello-world-actions:
     runs-on: ubuntu-latest
     steps:
