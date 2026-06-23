@@ -1,0 +1,26 @@
+name: Workflow con Triggers
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mensaje
+        run: echo "Workflow ejecutado correctamente"
+
+      - name: Fecha
+        run: date
+
+      - name: Usuario
+        run: 'echo "Usuario: ${{ github.actor }}"'
